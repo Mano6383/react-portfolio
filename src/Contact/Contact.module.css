@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contactContainer.show {
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+.contactContainer.show::after {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+
+}
+
+
+
+.contactHeading {
+  opacity: 0;
+  transform: scale(0.9);
+  display: inline-block;
+  position: relative; /* REQUIRED for ::after */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contactHeading.show {
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* underline */
+.contactHeading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: salmon;
+  transform: translateX(-50%);
+}
+
+.contactHeading.show::after {
+  animation: lineGrow 1s ease forwards;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 10%;
+  }
+}
+
+.connectText {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    font-size: 1.3rem;
+}
+
+.socialIcons {
+    margin-top: 20px;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+}
+
+.socialIcons a:nth-child(1) { color: #0a66c2; }
+.socialIcons a:nth-child(2) { color: #171515; }
+.socialIcons a:nth-child(3) { color: #e1306c; }
+.socialIcons a:nth-child(4) { color: #25d366; }
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quickLinks {
+    margin-top: 20px;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.quickLinks a {
+    color: black;
+    text-decoration: none;
+    /* margin: 5px 0; */
+}
+
+.quickLinks a:hover {
+    color: salmon;
+    text-decoration: underline;
+    animation: jump 0.3s ease-in forwards;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .contactHeading {
+        font-size: 1.5rem;
+    }
+    .connectText {
+        font-size: 1rem;
+    }
+    .quickLinks {
+        font-size: 1rem;
+    }
+}
+
+.connectText.show {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.sendButton {
+    color: salmon;
+    border: 2px solid salmon;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;   
+    animation: fadeInUp 3000ms ease-out forwards;
+}
+
+.sendButton:hover {
+    background-color: salmon;
+    color: white;
+    transition: all 300ms ease-in-out;
+    border: 2px solid salmon;
+}
+
+:global(.form-control).formControl {
+  border: none;
+  border-radius: 8px;
+}
+
+:global(.form-control).formControl:focus {
+  border-color: salmon;
+  box-shadow: 0 2px 5px rgba(255, 122, 110, 0.5);
+}
