@@ -32,7 +32,7 @@ function About() {
                         <button 
                             className={`me-3 ${styles.resumeButton}`}>
                             <a
-                                href="/public/assets/Mano Resume.pdf"
+                                href="/assets/Mano Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`${styles.resumeLink}`}
@@ -44,7 +44,7 @@ function About() {
                 </div>
                 <div className="col-md-4 d-none d-md-flex justify-content-center align-items-center">
                     <img 
-                        src="/public/assets/photo-1652684345676-2d31a1734ce7.avif" 
+                        src="/assets/photo-1652684345676-2d31a1734ce7.avif" 
                         alt="Profile Picture" 
                         className={`img-fluid shadow-sm ${styles.profileImg}`} 
                         width="150" 

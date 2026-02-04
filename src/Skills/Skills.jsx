@@ -34,35 +34,35 @@ function Skills() {
         </h3>
         <div className={`col-6 col-md-4 col-lg-2 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/html.png" alt="html icon"
+                <img src="/assets/html.png" alt="html icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
         </div>
         <div className={`col-6 col-md-4 col-lg-2 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/css.png" alt="css icon"
+                <img src="/assets/css.png" alt="css icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
         </div>
         <div className={`col-6 col-md-4 col-lg-2 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/js.png" alt="js icon"
+                <img src="/assets/js.png" alt="js icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
         </div>
         <div className={`col-6 col-md-4 col-lg-2 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/react.png" alt="react icon"
+                <img src="/assets/react.png" alt="react icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
         </div>
         <div className={`col-6 col-md-4 col-lg-2 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/bs.png" alt="bootstrap icon"
+                <img src="/assets/bs.png" alt="bootstrap icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
@@ -75,7 +75,7 @@ function Skills() {
         </h3>
         <div className={`col-6 col-md-4 col-lg-3 text-center my-2 ${styles.skillItem}`}>
             <span className={`${styles.skillIcon}`}>
-                <img src="/public/assets/java.png" alt="java icon"
+                <img src="/assets/java.png" alt="java icon"
                 className={`${styles.iconImage} ${styles.animate}`}
                 />
             </span>
