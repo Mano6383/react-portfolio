@@ -1,142 +1,146 @@
-.aboutSpan {
-    background-color: salmon;
-    display: inline-block;  
-    color: white;
-    margin-top: 50px;
-    padding: 2px 18px;
-    font-size: 0.9rem;
-    border-radius: 25px;
+/* ===============================
+   HELLO BADGE
+================================= */
 
-    animation: boom 600ms ease-out;
+.aboutSpan {
+  background-color: salmon;
+  display: inline-block;
+  color: white;
+  margin-top: 50px;
+  padding: 4px 18px;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  animation: boom 600ms ease-out;
 }
 
 @keyframes boom {
-    0% {
-        transform: scale(0.2);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+
+/* ===============================
+   TEXT STYLING
+================================= */
 
 .aboutCode {
-    color: salmon;
-    
+  color: salmon;
+  font-weight: 600;
 }
 
-/* Fade-in animation */
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================= */
+
 .fadeIn {
-    opacity: 0;
-    animation: fadeInUp 2000ms ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2000ms ease, transform 600ms ease;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* ===============================
+   QUOTE SECTION
+================================= */
 
 .quoteWrapper {
-    max-width: 680px;  
-    margin: 2.5rem auto;
-    position: relative;
-    line-height: 2;
-    padding: 1.5rem 2rem;
-    animation: fadeInUp 2500ms ease-out forwards;
+  max-width: 680px;
+  margin: 2.5rem auto;
+  position: relative;
+  line-height: 2;
+  padding: 1.5rem 2rem;
 }
 
 .openQuote,
 .closeQuote {
-    position: absolute;
-    font-size: 2.2rem;   /* smaller */
-    color: #ff7a6e;
-    opacity: 0.8;
+  position: absolute;
+  font-size: 2rem;
+  color: #ff7a6e;
+  opacity: 0.7;
 }
 
 .openQuote {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
 
 .closeQuote {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
 
-@media screen  and (max-width: 768px) {
-    .quoteWrapper {
-        padding: 1rem 1.5rem;
-        line-height: 1.8;
-    }
-    
+@media screen and (max-width: 768px) {
+  .quoteWrapper {
+    padding: 1rem 1.2rem;
+    line-height: 1.8;
+  }
 }
+
+/* ===============================
+   RESUME BUTTON
+================================= */
 
 .resumeButton {
-    color: salmon;
-    border: 2px solid salmon;
-    font-weight: 600;
-    background-color: transparent;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    cursor: pointer;   
-    animation: fadeInUp 3000ms ease-out forwards;
-
+  color: salmon;
+  border: 2px solid salmon;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 10px 22px;
+  font-size: 1.05rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .resumeButton:hover {
-    background-color: salmon;
-    color: white;
-    transition: all 300ms ease-in-out;
+  background-color: salmon;
+  color: white;
 }
 
 .resumeLink {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
+
+/* ===============================
+   PROFILE IMAGE
+================================= */
 
 .profileImg {
-    min-width: 280px;
-    min-height: 280px;
-    object-fit: cover;
-    border-radius: 12px;
-    animation: fadeInUp 3000ms ease-out forwards;
+  min-width: 280px;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 800ms ease;
 }
 
+.profileImg:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   FORM CONTROL (if used later)
+================================= */
+
 .formControl {
-    border: 2px solid salmon;
-    border-radius: 8px;
+  border: 2px solid salmon;
+  border-radius: 8px;
 }
 
 .formControl:focus {
-    border: 2px solid #ff7a6e;
-    box-shadow: 0 0 5px rgba(255, 122, 110, 0.5);
-    outline: none;
-}
-
-.fadeIn {
-    opacity: 0;
-    animation: fadeInUp 2000ms ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  border: 2px solid #ff7a6e;
+  box-shadow: 0 0 5px rgba(255, 122, 110, 0.5);
+  outline: none;
 }

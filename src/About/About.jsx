@@ -6,12 +6,13 @@ function About() {
     const elements = document.querySelectorAll(`.${styles.fadeIn}`);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle(
-            styles.show,
-            entry.isIntersecting
-        );
+        if (entry.isIntersecting) {
+        entry.target.classList.add(styles.show);
+      } else {
+        entry.target.classList.remove(styles.show);
+      }
+      } );
       });
-    });
     elements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
     }, []);
@@ -20,7 +21,7 @@ function About() {
         <div className="container p-2 bg-white" id="about">
             <div className="row justify-content-center my-5">
                 <div className="col-auto">
-                    <span className={`${styles.aboutSpan} ${styles.fadeIn}`}>
+                    <span className={`${styles.aboutSpan}`}>
                         Hello!
                     </span>
                 </div>
