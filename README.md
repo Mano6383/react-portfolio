@@ -16,3 +16,6 @@ Personal portfolio built with React and Bootstrap.
 ## Run Locally
 npm install
 npm run dev
+
+## Live site url
+https://tubular-bombolone-644424.netlify.app/#about
